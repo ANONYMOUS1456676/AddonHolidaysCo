@@ -1,55 +1,107 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" type="text/css" href="travel.css">
-  <title>Travel Booking Form</title>
-</head>
-<body>
-  <form id="bookingForm">
-    <h1>Book Your Travel</h1>
-    <fieldset id="personalInfo">
-      <legend>Personal Information:</legend>
-      <label for="firstName">Name:</label><br>
-      <input type="text" id="firstName" name="firstName" required><br>
-      <label for="lastName">Last Name:</label><br>
-      <input type="text" id="lastName" name="lastName" required><br>
-      <label for="email">E-mail:</label><br>
-      <input type="email" id="email" name="email" required><br>
-      <label for="contactNo">Contact No:</label><br>
-      <input type="tel" id="contactNo" name="contactNo" required><br>
-    </fieldset>
-    <fieldset id="hotelBooking">
-      <legend>Hotel Booking:</legend>
-      <label for="roomType">Room Type:</label><br>
-      <select id="roomType" name="roomType" required>
-        <option value="">Select</option>
-        <option value="standard">Standard</option>
-        <option value="deluxe">Deluxe</option>
-      </select><br>
-      <label for="arrivalDate">Arrival Date & Time:</label><br>
-      <input type="datetime-local" id="arrivalDate" name="arrivalDate" required><br>
-      <label for="departureDate">Departure Date & Time:</label><br>
-      <input type="datetime-local" id="departureDate" name="departureDate" required><br>
-      <label for="guests">Number of Guests:</label><br>
-      <input type="number" id="guests" name="guests" min="1" required><br>
-    </fieldset>
-    <fieldset id="airTicketBooking">
-      <legend>Air Ticket Booking:</legend>
-      <label for="departureCity">Departure City:</label><br>
-      <input type="text" id="departureCity" name="departureCity" required><br>
-      <label for="arrivalCity">Arrival City:</label><br>
-      <input type="text" id="arrivalCity" name="arrivalCity" required><br>
-      <label for="departureDate">Departure Date:</label><br>
-      <input type="date" id="departureDate" name="departureDate" required><br>
-    </fieldset>
-    <fieldset id="visaServices">
-      <legend>Visa Services:</legend>
-      <label for="visaType">Visa Type:</label><br>
-      <select id="visaType" name="visaType" required>
-        <option value="">Select</option>
-        <option value="tourist">Tourist</option>
-        <option value="business">Business</option>
-      </select><br>
-      <label for="country">Country:</label><br>
-      <input type="text" id="country" name="country" required><br>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--
+
+Template 2093 Flight
+
+http://www.tooplate.com/view/2093-flight
+
+-->
+    	<title>Flight - Travel and Tour</title>
     
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/datepicker.css">
+        <link rel="stylesheet" href="css/tooplate-style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+    <section class="banner" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="left-side">
+                        <div class="logo">
+                            <p><h3>AddonHolidaysCo.</h3></p>
+                        </div>
+                        <div class="tabs-content">
+                            <h4>FOLLOW US:</h4>
+                            <ul class="social-links">
+                                <li><a href="https://www.facebook.com/addonholidays?mibextid=rS40aB7S9Ucbxw6v">Find us on <em>Facebook</em><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.youtube.com/@travelwithaddon">Our <em>YouTube</em> Channel<i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/travelwithaddon/">Follow our <em>instagram</em><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="page-direction-button">
+                            <a href="contact.html"><i class="fa fa-phone"></i>Contact Us Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <section id="first-tab-group" class="tabgroup">
+                        <div id="tab1">
+                            <div class="submit-form">
+                                <h1>Travel Form</h1>
+                                <form action="/submit_travel_form" method="post">
+                                    <div class="form-group">
+                                        <label for="name">Name:</label>
+                                        <input type="text" id="name" name="name" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" id="email" name="email" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="country">Country:</label>
+                                        <input type="text" id="country" name="country" class="form-control" required>
+                                    </fieldset>
+                                    <fieldset id="hotelBooking">
+                                      <legend>Hotel Booking:</legend>
+                                      <label for="roomType">Room Type:</label><br>
+                                      <select id="roomType" name="roomType" required>
+                                        <option value="">Select</option>
+                                        <option value="standard">Standard</option>
+                                        <option value="deluxe">Deluxe</option>
+                                      </select><br>
+                                      <label for="arrivalDate">Arrival Date & Time:</label><br>
+                                      <input type="datetime-local" id="arrivalDate" name="arrivalDate" required><br>
+                                      <label for="departureDate">Departure Date & Time:</label><br>
+                                      <input type="datetime-local" id="departureDate" name="departureDate" required><br>
+                                      <label for="guests">Number of Guests:</label><br>
+                                      <input type="number" id="guests" name="guests" min="1" required><br>
+                                    </fieldset>
+                                    <fieldset id="airTicketBooking">
+                                      <legend>Air Ticket Booking:</legend>
+                                      <label for="departureCity">Departure City:</label><br>
+                                      <input type="text" id="departureCity" name="departureCity" required><br>
+                                      <label for="arrivalCity">Arrival City:</label><br>
+                                      <input type="text" id="arrivalCity" name="arrivalCity" required><br>
+                                      <label for="departureDate">Departure Date:</label><br>
+                                      <input type="date" id="departureDate" name="departureDate" required><br>
+                                    </fieldset>
+                                    <fieldset id="visaServices">
+                                      <legend>Visa Services:</legend>
+                                      <label for="visaType">Visa Type:</label><br>
+                                      <select id="visaType" name="visaType" required>
+                                        <option value="">Select</option>
+                                        <option value="tourist">Tourist</option>
+                                        <option value="business">Business</option>
+                                      </select><br>
+                                      <label for="country">Country:</label><br>
+                                      <input type="text" id="country" name="country" required><br>                                
+                                        <button type="submit" id="form-submit" class="btn">Book Now</button>
+                                    </div>
