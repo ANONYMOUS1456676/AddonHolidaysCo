@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(assets/56.jpeg);
+  }
+  
+  #bookingForm {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  #bookingForm h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #bookingForm fieldset {
+    margin-bottom: 20px;
+  }
+  
+  #bookingForm legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #bookingForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #bookingForm input[type="text"],
+  #bookingForm input[type="email"],
+  #bookingForm input[type="tel"],
+  #bookingForm input[type="date"],
+  #bookingForm select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #bookingForm input[type="submit"],
+  #bookingForm input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffcccc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  #bookingForm input[type="submit"]:hover,
+  #bookingForm input[type="reset"]:hover {
+    background-color: #e66767;
+  }
+  
+  /* Hotel Booking Styles */
+  #hotelBooking {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #hotelBooking label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+  
+  #hotelBooking select {
+    width: auto;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* Cruise Booking Styles */
+  #cruiseBooking {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #cruiseBooking label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+  
+  #cruiseBooking input[type="number"] {
+    width: 50px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+  }
+  
+  /* Visa Services Styles */
+  #visaServices {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  

@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="cruise.css">
+        <title>Cruise Booking Form</title>
+    </head>
+    <body>
+        <form id="cruiseForm">
+            <h1>Cruise Booking</h1>
+            <label for="cruiseType">Cruise Type:</label>
+            <select id="cruiseType" name="cruiseType" required>
+                <option value="">Select a cruise type</option>
+                <option value="caribbean">Caribbean Cruise</option>
+                <option value="alaskan">Alaskan Cruise</option>
+            </select><br>
+            <label for="shipName">Ship Name:</label><br>
+            <input type="text" id="shipName" name="shipName" required><br>
+            <label for="duration">Duration:</label><br>
+            <input type="number" id="duration" name="duration" min="3" max="14" required><br>
+            <label for="cabinType">Cabin Type:</label><br>
+            <select id="cabinType" name="cabinType" required>
+                <option value="">Select a cabin type</option>
+                <option value="interior">Interior</option>
+                <option value="oceanview">Oceanview</option>
+                <option value="balcony">Balcony</option>
+                <option value="suite">Suite</option>
+            </select><br>
+            <label for="price">Price:</label><br>
+            <input type="number" id="price" name="price" min="0" required><br>
+            <input type="submit" value="Book Cruise">
+        </form>
+        <script>
+            function calculateTotalPrice(cruiseType, duration, cabinType) {
+                let price = 0;
+                if (cruiseType === 'caribbean') {
+                    price = 1000;
+                    if (duration > 7) {
+                        price += (duration - 7) * 100;
+                    }
+                } else if (cruiseType === 'alaskan') {
+                    price = 1500;
+                    if (duration > 10) {
+                        price += (duration - 10) * 150;
+                    }
+                }
+                if (cabinType === 'balcony') {
+                    price += 500;
+                 } 
+                 else if (cabinType === 'suite') {
+                    price += 1000;
+}
+                return price;
+}
+
+            function handleFormSubmission(event) {
+                event.preventDefault();
+                const cruiseType = document.getElementById('cruiseType').value;
+                const duration = parseInt(document.getElementById('duration').value);
+                const cabinType = document.getElementById('cabinType').value;
+                const price = calculateTotalPrice(cruiseType, duration, cabinType);
+                document.getElementById('price').value = price;
+                alert('Total price calculated: ' + price);
+ }
+
+document.getElementById('cruiseForm').addEventListener('submit', handleFormSubmission);
+</script>
+</body>
+ </html>

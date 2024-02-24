@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url("assets/890.jpg");
+  }
+  
+  #cruiseForm {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+  }
+  
+  #cruiseForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  #cruiseForm input[type="text"],
+  #cruiseForm input[type="date"],
+  #cruiseForm select,
+  #cruiseForm textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #cruiseForm input[type="date"] {
+    padding: 10px 10px 10px 40px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 16'><path d='M0,5.5 l7,7 7,-7'/></svg>");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 12px;
+  }
+  
+  #cruiseForm input[type="submit"],
+  #cruiseForm input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0091cd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  #cruiseForm input[type="submit"]:hover,
+  #cruiseForm input[type="reset"]:hover {
+    background-color: #0073a8;
+  }
+  
+  #cruiseForm input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  #cruiseForm .triple-wthree {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #cruiseForm .triple-wthree div {
+    flex: 1;
+  }
+  
+  #cruiseForm .radio-section {
+    margin-bottom: 10px;
+  }
+  
+  #cruiseForm .radio-section h6 {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  #cruiseForm .radio-section label {
+    display: inline;
+  }
+  
+  #cruiseForm .radio-section .check {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 5px;
+    position: relative;
+  }
+  
+  #cruiseForm .radio-section .check .inside {
+    width: 10px;
+    height: 10px;
+    background-color: #0091cd;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  #cruiseForm .radio-section input[type="radio"]:checked + .check .inside {
+    opacity: 1;
+  }

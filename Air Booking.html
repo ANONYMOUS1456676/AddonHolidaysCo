@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Air Booking.css">
+  <title>Flight Booking Form</title>
+</head>
+<body>
+  <form id="flightForm">
+    <label for="Hotel Booking"><h1>Book Your Flight</h1></label>
+    <label for="tripType">Roundtrip</label>
+    <input type="radio" id="tripType" name="tripType" value="roundtrip" checked>
+    <label for="oneWay">One way</label>
+    <input type="radio" id="oneWay" name="tripType" value="oneWay">
+    <br>
+    <label for="flyingFrom">FLYING FROM</label><br>
+    <input type="text" id="flyingFrom" name="flyingFrom" required><br>
+    <label for="flyingTo">FLYING TO</label><br>
+    <input type="text" id="flyingTo" name="flyingTo" required><br>
+    <label for="checkIn">CHECK IN</label><br>
+    <input type="date" id="checkIn" name="checkIn" required><br>
+    <label for="travelClass">TRAVEL CLASS</label><br>
+    <select id="travelClass" name="travelClass" required>
+      <option value="">Select a travel class</option>
+      <option value="economy">Economy class</option>
+      <option value="business">Business class</option>
+      <option value="first">First class</option>
+    </select><br>
+    <label for="tripType2">Multi-City</label>
+    <input type="radio" id="tripType2" name="tripType2" value="multiCity">
+    <br>
+    <label for="adults">ADULTS</label><br>
+    <select id="adults" name="adults" required>
+      <option value="">Select number of adults</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select><br>
+    <label for="checkOut">CHECK OUT</label><br>
+    <input type="date" id="checkOut" name="checkOut" disabled><br>
+    <label for="children">CHILDREN</label><br>
+    <select id="children" name="children" required>
+      <option value="">Select number of children</option>
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select><br>
+    <input type="submit" value="Check availability">
+  </form>
+  <script src="main.js"></script>
+</body>
+</html>

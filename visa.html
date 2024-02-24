@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="visa.css">
+    <title>Visa Services Form</title>
+</head>
+<body>
+    <form id="visaForm">
+        <h1>Visa Services</h1>
+        <label for="visaType"><h3>Visa Type:</h3></label>
+        <select id="visaType" name="visaType" required>
+            <option value=""><h3>Select a visa type</h3></option>
+            <option value="tourist"><h3>Tourist Visa</h3></option>
+            <option value="business"><h3>Business Visa</h3></option>
+        </select><br>
+        <label for="country"><h3>Country:</h3></label><br>
+        <input type="text" id="country" name="country"><br>
+        <label for="duration"><h3>Duration:</h3></label><br>
+        <input type="number" id="duration" name="duration" min="1" max="90" required><br>
+        <label for="visaFee"><h3>Visa Fee:</h3></label><br>
+        <input type="number" id="visaFee" name="visaFee" min="0" required><br>
+        <label for="purpose"><h3>Purpose of Visit:</h3></label><br>
+        <textarea id="purpose" name="purpose" required></textarea><br>
+        <input type="submit" value="Apply for Visa">
+    </form>
+    <script>
+        function calculateVisaFee(visaType, duration) {
+            let fee = 0;
+            if (visaType === 'tourist') {
+                fee = 100;
+                if (duration > 30) {
+                    fee += (duration - 30) * 10;
+                }
+            } else if (visaType === 'business') {
+                fee = 200;
+                if (duration > 60) {
+                    fee += (duration - 60) * 20;
+                }
+            }
+            return fee;
+        }
+
+        function handleFormSubmission(event) {
+            event.preventDefault();
+            const visaType = document.getElementById('visaType').value;
+            const duration = parseInt(document.getElementById('duration').value);
+            const visaFee = calculateVisaFee(visaType, duration);
+            document.getElementById('visaFee').value = visaFee;
+            alert('Visa fee calculated: ' + visaFee);
+        }
+
+        document.getElementById('visaForm').addEventListener('submit', handleFormSubmission);
+    </script>
+</body>
+</html>

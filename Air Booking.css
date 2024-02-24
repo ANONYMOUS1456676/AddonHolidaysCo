@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(assets/1000000000000.jpg);
+  }
+  
+  #flightForm {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  #flightForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  #flightForm input[type="text"],
+  #flightForm input[type="date"],
+  #flightForm select,
+  #flightForm textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #flightForm input[type="date"] {
+    padding: 10px 10px 10px 40px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 16'><path d='M0,5.5 l7,7 7,-7'/></svg>");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 12px;
+  }
+  
+  #flightForm input[type="submit"],
+  #flightForm input[type="reset"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffcccc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  #flightForm input[type="submit"]:hover,
+  #flightForm input[type="reset"]:hover {
+    background-color: #e66767;
+  }
+  
+  #flightForm input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  #flightForm .triple-wthree {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #flightForm .triple-wthree div {
+    flex: 1;
+  }
+  
+  #flightForm .radio-section {
+    margin-bottom: 10px;
+  }
+  
+  #flightForm .radio-section h6 {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  #flightForm .radio-section label {
+    display: inline;
+  }
+  
+  #flightForm .radio-section .check {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 5px;
+    position: relative;
+  }
+  
+  #flightForm .radio-section .check .inside {
+    width: 10px;
+    height: 10px;
+    background-color: #0091cd;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  #flightForm .radio-section input[type="radio"]:checked + .check .inside {
+    opacity: 1;
+  }
+
+  
+  #flightForm {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
