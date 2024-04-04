@@ -85,3 +85,10 @@ $(document).ready(function() {
     window.location.href = 'travel.html';
   });
 });
+
+let profile = document.querySelector('.profile');
+let menu = document.querySelector('.menu');
+
+profile.onclick = function () {
+    menu.classList.toggle('active');
+}
